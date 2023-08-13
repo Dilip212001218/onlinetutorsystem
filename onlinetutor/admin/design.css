@@ -1,0 +1,110 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:700|Poppins&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        text-align: center;
+        font-family: 'Poppins',sans-serif;
+      }
+      ::selection{
+        color: white;
+        background: #a00abe;
+      }
+      .center,.start-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+       
+      .modal-box{
+        top: 40%;
+        opacity: 0;
+        visibility: hidden;
+        background: white;
+        height: auto;
+        width: 400px;
+        padding: 30px;
+        border-radius: 5px;
+        border: 1px solid #ea0ff1;
+        box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+      }
+      .start-btn.show-modal{
+        opacity: 0;
+        visibility: hidden;
+      }
+      .modal-box.show-modal{
+        top: 50%;
+        opacity: 1;
+        visibility: visible;
+        transition: .4s;
+      }
+      .modal-box .fa-times{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #c30de7;
+        height: 45px;
+        width: 50px;
+        line-height: 40px;
+        color: white;
+        font-size: 18px;
+        border-radius: 0 5px 0 50px;
+        padding-left: 13px;
+        cursor: pointer;
+      }
+      .fa-times:hover{
+        font-size: 22px;
+      }
+.upload{
+    width: 140px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+  }
+  .upload img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  .upload .rightRound{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #bb00FF;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .upload .leftRound{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: red;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .upload .fa{
+    color: white;
+  }
+  .upload input{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+  }
+  .upload input::-webkit-file-upload-button, .upload input[type=submit]{
+    cursor: pointer;
+  }

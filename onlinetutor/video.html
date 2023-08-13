@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Channel Search</title>
+	<!-- Include jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- Include custom JavaScript -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// Listen for keyup event on the input field
+			$("#search-input").keyup(function(){
+				// Retrieve the input field value
+				var query = $(this).val();
+				// Send AJAX request to the PHP script
+				$.ajax({
+					url: "search.php",
+					method: "GET",
+					data: {query: query},
+					success: function(data){
+						$("#search-results").html(data);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- Display search form -->
+	<form>
+		<label for="search-input">Search for a channel:</label>
+		<input type="text" id="search-input" name="search" autocomplete="off">
+	</form>
+	<!-- Display search results -->
+	<div
